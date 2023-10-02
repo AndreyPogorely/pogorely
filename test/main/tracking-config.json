@@ -305,6 +305,7 @@
          },
          "customMetadata":{
             "mediaResume":"{data.hasSessionResumed}",
+            "retainTrackingSession":"{data.retainTrackingSession}",
 	    "eVar23": "{data.eVar23}",
 	    "eVar24": "{data.eVar24}",
             "a.DeviceName": "{context.deviceName}",
