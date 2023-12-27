@@ -1,6 +1,6 @@
 {
   "Adobe": {
-    "enabled": true,
+    "enabled": false,
     "category": "tracking",
     "params": {
       "trackerCommands": {
@@ -63,7 +63,9 @@
         "streamDeviceSupportedFormat": "{data.deviceCapabilities}"
       },
       "qoeData": {
-        "media.qoe.timeToStart": "{data.timeToStart}"
+        "media.qoe.timeToStart": "{data.timeToStart}",
+        "media.qoe.errorID": "{data.errorCode}",
+        "media.qoe.errorSource": "player"
       },
       "dataType": {
         "accountInfo.analytics.enableSSL": "boolean",
@@ -78,7 +80,7 @@
     }
   },
   "AdobeECID": {
-    "enabled": true,
+    "enabled": false,
     "category": "tracking",
     "params": {
       "serverInfo": {
@@ -88,7 +90,7 @@
     }
   },
   "Comscore": {
-    "enabled": true,
+    "enabled": false,
     "category": "tracking",
     "params": {
       "trackerCommands": {
@@ -123,7 +125,7 @@
     }
   },
   "Conviva": {
-    "enabled": true,
+    "enabled": false,
     "category": "qos",
     "params": {
       "trackerCommands": {
@@ -285,7 +287,7 @@
     }
   },
   "KantarBARB": {
-    "enabled": true,
+    "enabled": false,
     "category": "tracking",
     "params": {
       "accountInfo": {
@@ -305,7 +307,7 @@
     }
   },
   "Moat": {
-    "enabled": true,
+    "enabled": false,
     "category": "tracking",
     "params": {
       "trackerCommands": {
@@ -322,7 +324,7 @@
     }
   },
   "Mux": {
-    "enabled": true,
+    "enabled": false,
     "category": "qos",
     "params": {
       "trackerCommands": {
@@ -413,7 +415,7 @@
     }
   },
   "Oztam": {
-    "enabled": true,
+    "enabled": false,
     "category": "tracking",
     "params": {
       "trackerCommands": {
@@ -433,7 +435,7 @@
     }
   },
   "Sparrow": {
-    "enabled": true,
+    "enabled": false,
     "category": "tracking",
     "params": {
       "trackerCommands": {
@@ -469,12 +471,12 @@
       },
       "sessionInfo": {
         "id3Owner": "com.paramount.vtg",
-        "adTemplate": "https://7f077.v.fwmrm.net/ad/g/1?asnw=520311&caid=Superbowl_58_Linear_Stream_Game_Day&csid=streaming_paramountplus_us_ctv_amazonfiretv_live&flag=%2Bamcb%2Bemcr%2Bdtrd%2Bsltp%2Bslcb%2Bexvt%2Bfbad%2Bsync%2Bnucr%2Baeti&metr=1023&mode=LIVE&nw=520311&prof=520311%3Asuperbowl&pvrn=[RANDOM]&resp=vmap1%2Bvast4&ssnw=520311&vdty=VARIABLE&vrdu=[DUR]&vprn=[RANDOM];_fw_coppa=0&_fw_nielsen_app_id=P0C0C37AD-20C4-4EF7-AF25-BEBCB16DF85E&_fw_hylda=acid%3Dtpplushylda%26aiid%3D[AIID]%26abid%3Dbreak%3A%2F%2F[AIID]%2F[ABID]&_fw_player_height=1080&_fw_player_width=1920&_fw_us_privacy=1YNN&fms_subscriberid=225085918&_fw_3P_UID=UID2%3AAgAABVkXekqDKXf4Ty82bkrsxBKXbnDg8IcBXEcFfNI20bYhJ%2B8oFlkNEm2eW6UB2V1CqGcVT5qyiKWTOEU9Vg7tm6IsjOy1z83dwW0%2F651cXme6bXnCKTFFgZzTCEM6JIBMXBReobPEv%2ByiD4DbX9Q6pXlqOu0RZsZR1HuohiO9MBDHQA%3D%3D&fms_ruleid=10000&fms_emailhash=dff691398f50b6d2dc45a25b45fdf015058c70a41d9958a4340f9fe65c3a1799&_fw_vcid2=dff691398f50b6d2dc45a25b45fdf015058c70a41d9958a4340f9fe65c3a1799&fms_bididtype=1010&fms_ifa=0faeb4c4-ebd0-4b55-b44e-e1d1fada3910&fms_vcid2type=emailhash&sb=22&packageSource=googleplay&ge=1&gr=3&sub=225085918&user=adult&session=c&subses=4&sz=640x480&tfcd=0&vguid=695991ec-e903-49d1-ae3b-3fb3b3094141;cpsq=1&maxd=[DUR]&mind=[DUR]&ptgt=a&slid=&tpcl=MIDROLL&slau=Super%20Bowl%2058&tpos=0;slid=companion&ptgt=p&slau=companion&w=1920&h=375&flag=%2Bcmpn&prct=application%2Fjson%2Ctext%2Fhtml_doc_ref"
+        "adTemplate": "https://7f077.v.fwmrm.net/ad/g/1?asnw=520311&caid=Superbowl_58_Linear_Stream_Game_Day&csid=streaming_paramountplus_us_ctv_amazonfiretv_live&flag=%2Bamcb%2Bemcr%2Bdtrd%2Bsltp%2Bslcb%2Bexvt%2Bfbad%2Bsync%2Bnucr%2Baeti&metr=1023&mode=LIVE&nw=520311&prof=520311%3Asuperbowl&pvrn=[RANDOM]&resp=vmap1%2Bvast4&ssnw=520311&vdty=VARIABLE&vrdu=[DUR]&vprn=[RANDOM];_fw_coppa=0&_fw_did=amazon_advertising_id:0faeb4c4-ebd0-4b55-b44e-e1d1fada3910&_fw_nielsen_app_id=P0C0C37AD-20C4-4EF7-AF25-BEBCB16DF85E&_fw_hylda=acid%3Dtpplushylda%26aiid%3D[AIID]%26abid%3Dbreak%3A%2F%2F[AIID]%2F[ABID]&_fw_player_height=1080&_fw_player_width=1920&_fw_us_privacy=1YNN&fms_subscriberid=80747620&_fw_3P_UID=UID2%3AAgAABVHjp%2F0qaqkT69XmNUBQWUMIy16Z3UPhaPfFQ9SAtNuORaHOQVsxM5PDGv936x0LPgNFOt1Ilu1NV4IWh9Ch3QawXpwigHUfPBs0MCmYsm4OGHYA47yVqGLzeSj%2BzGNYb%2BZeYSm7Pnmn2lZ%2BypfJSx4hWGMu0fClNdifM%2FO7alczag%3D%3D&fms_ruleid=10000&fms_emailhash=35c70ea01d22e010bf51bd2f9def921527c174c9e80107216ba5ef260bbe10ee&_fw_vcid2=35c70ea01d22e010bf51bd2f9def921527c174c9e80107216ba5ef260bbe10ee&fms_bididtype=1010&fms_ifa=0faeb4c4-ebd0-4b55-b44e-e1d1fada3910&fms_vcid2type=emailhash&sb=22&packageSource=cbscomp&ge=3&gr=4&sub=80747620&user=adult&session=a&subses=2&sz=640x480&tfcd=0&vguid=b8f80ccf-b1ac-435a-a735-a57b63c10de8;cpsq=1&maxd=[DUR]&mind=[DUR]&ptgt=a&slid=&tpcl=MIDROLL&slau=Super%20Bowl%2058&tpos=0;slid=companion&ptgt=p&slau=companion&w=1920&h=375&flag=%2Bcmpn&prct=application%2Fjson%2Ctext%2Fhtml_doc_ref"
       }
     }
   },
   "Youbora": {
-    "enabled": true,
+    "enabled": false,
     "params": {
       "trackerCommands": {
         "delayedStart": "{context.delayedStart}"
