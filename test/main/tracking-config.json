@@ -1,6 +1,6 @@
 {
   "Adobe": {
-    "enabled": false,
+    "enabled": true,
     "category": "tracking",
     "params": {
       "trackerCommands": {
@@ -38,15 +38,16 @@
         "media.resume": "{context.hasSessionResumed}"
       },
       "adBreakInfo": {
-        "media.ad.podFriendlyName": "{data.adPodType}",
-        "media.ad.podIndex": "{data.adPodIndex}",
+        "media.ad.podFriendlyName": "{data.adPodType} | MID",
+        "media.ad.podIndex": "{data.adPodIndex} | 0",
         "media.ad.podSecond": "{data.playhead}"
       },
       "adInfo": {
+        "media.ad.name": "{data.adTitle} | NA",
         "media.ad.id": "{data.mediaTitle} - {data.adTitle}",
         "media.ad.length": "{data.adDuration}",
         "media.ad.creativeId": "{data.adId}",
-        "media.ad.creativeURL": "{data.adResourceUrl}",
+        "media.ad.creativeURL": "{data.adResourceUrl} | NA",
         "media.ad.playerName": "{data.playerName}",
         "media.ad.podPosition": "{data.adIndex}"
       },
@@ -80,7 +81,7 @@
     }
   },
   "AdobeECID": {
-    "enabled": false,
+    "enabled": true,
     "category": "tracking",
     "params": {
       "serverInfo": {
@@ -90,7 +91,7 @@
     }
   },
   "Comscore": {
-    "enabled": false,
+    "enabled": true,
     "category": "tracking",
     "params": {
       "trackerCommands": {
@@ -125,7 +126,7 @@
     }
   },
   "Conviva": {
-    "enabled": false,
+    "enabled": true,
     "category": "qos",
     "params": {
       "trackerCommands": {
@@ -287,7 +288,7 @@
     }
   },
   "KantarBARB": {
-    "enabled": false,
+    "enabled": true,
     "category": "tracking",
     "params": {
       "accountInfo": {
@@ -307,7 +308,7 @@
     }
   },
   "Moat": {
-    "enabled": false,
+    "enabled": true,
     "category": "tracking",
     "params": {
       "trackerCommands": {
@@ -324,7 +325,7 @@
     }
   },
   "Mux": {
-    "enabled": false,
+    "enabled": true,
     "category": "qos",
     "params": {
       "trackerCommands": {
@@ -415,7 +416,7 @@
     }
   },
   "Oztam": {
-    "enabled": false,
+    "enabled": true,
     "category": "tracking",
     "params": {
       "trackerCommands": {
@@ -435,7 +436,7 @@
     }
   },
   "Sparrow": {
-    "enabled": false,
+    "enabled": true,
     "category": "tracking",
     "params": {
       "trackerCommands": {
@@ -449,16 +450,16 @@
         "enableSSL": true
       },
       "payload": {
-        "contentId": "{data.mediaId}",
-        "userId": "{context.userId} | -1",
-        "siteId": "{context.siteId} | 164",
-        "sessionId": "{context.sessionId}",
-        "platform": "{data.platform}",
-        "premium": "{data.mediaPremiumContent}",
-        "affiliate": "{data.affiliateFeed}",
-        "medTime": "{data.playhead}",
+        "contentid": "{data.mediaId} | 00000000",
+        "userid": "{context.userId} | -1",
+        "siteid": "{context.siteId} | 164",
+        "sessionid": "{context.sessionId}",
+        "platform": "{data.platform} | android",
+        "premium": "{data.mediaPremiumContent} | false",
+        "affiliate": "{data.affiliateFeed} | false",
+        "medtime": "{data.playhead}",
         "title": "{data.mediaTitle}",
-        "userProfile": "0"
+        "userprofile": "0"
       }
     }
   },
@@ -476,7 +477,7 @@
     }
   },
   "Youbora": {
-    "enabled": false,
+    "enabled": true,
     "params": {
       "trackerCommands": {
         "delayedStart": "{context.delayedStart}"
@@ -537,7 +538,7 @@
         "resource": "{data.mediaUrl}",
         "deviceUUID": "",
         "username": "",
-        "playrate": "1",
+        "playRate": "1.0",
         "userType": "",
         "transactionCode": "",
         "parsedResource": "",
